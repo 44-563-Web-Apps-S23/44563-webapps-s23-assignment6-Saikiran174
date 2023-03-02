@@ -46,14 +46,24 @@ function checkPainter(){
             if (x == y) {
                 good = good + 1;
                 alert("You got it right")
+                out.innerHTML = "Right count : "+good 
 
             } else {
                 oops = oops + 1;
                 alert("Sorry")
+                out.innerHTML = "Wrong count : "+oops
 
             } 
-        out.innerHTML = "correct: " + good + " " + "wrong: " + oops
-        }
+            if(oops==11){
+                alertButton()
+            }
+        function alertButton(){
+                alert("Sorry, ran out of guesses.")
+                oops=0
+                out.innerHTML = "Wrong count: "+oops
+        }    
+        
+    }
 </script>
 
 <div class="container">
